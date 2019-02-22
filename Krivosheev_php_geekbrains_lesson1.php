@@ -26,7 +26,9 @@
         echo "<br><br>";
         echo "a = $a <br>";
         echo "b = $b <br>";
+        echo "<br><br>";
         list ($a, $b) = array ($b, $a);
+        echo 'list ($a, $b) = array ($b, $a)';
         echo "<br><br>";
         echo "Теперь a = $a, <br>";
         echo "а b = $b. <br>";
