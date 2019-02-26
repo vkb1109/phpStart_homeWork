@@ -38,6 +38,17 @@ function mathOperation ($arg1, $arg2, $operation){
     }
     return $result;
 }
+
+function power($val, $pow){
+    if ($pow == 0){
+        return 1;
+    }
+    if ($pow < 0){
+        return power(1 / $val, -$pow);
+    }
+    return $val * power($val, $pow - 1);
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -59,7 +70,7 @@ function mathOperation ($arg1, $arg2, $operation){
         else                           
             echo $a + $b;
         
-            double_br();     
+        double_br();     
         echo "<h1>Задание 2.</h1>";
         switch($a){
             case 1: echo 1 . " ";
@@ -95,14 +106,17 @@ function mathOperation ($arg1, $arg2, $operation){
 
         double_br();     
         echo "<h1>Задание 5.</h1>";
-        $lesson2 = file_get_contents('index.html');
+        $lesson2 = file_get_contents('template.html');
         $yearNow = date ('Y');
         $lesson2 = str_replace("Подвал", $yearNow, $lesson2);
         echo $lesson2;
 
         double_br();     
         echo "<h1>Задание 6.</h1>";
+        echo power(2, 3);
         
+        double_br();     
+        echo "<h1>Задание 7.</h1>";
     ?>
 
     <?php
