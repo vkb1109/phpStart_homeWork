@@ -91,10 +91,18 @@ function mathOperation ($arg1, $arg2, $operation){
         
         double_br();     
         echo "<h1>Задание 4.</h1>";
-        echo mathOperation ($a, $b, 'Произведение');
+        echo mathOperation($a, $b, 'Произведение');
 
         double_br();     
         echo "<h1>Задание 5.</h1>";
+        $lesson2 = file_get_contents('index.html');
+        $yearNow = date ('Y');
+        $lesson2 = str_replace("Подвал", $yearNow, $lesson2);
+        echo $lesson2;
+
+        double_br();     
+        echo "<h1>Задание 6.</h1>";
+        
     ?>
 
     <?php
