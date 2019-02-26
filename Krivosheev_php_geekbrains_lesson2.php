@@ -19,6 +19,25 @@ function division($x, $y){
     return $x / $y;
 }
 
+function mathOperation ($arg1, $arg2, $operation){
+    switch ($operation){
+        case "Сумма":
+            $result = "Сумма: " . sum($arg1, $arg2);
+            break;
+        case "Разность":
+            $result = "Разность: " . subtraction($arg1, $arg2);
+            break;
+        case "Произведение":
+            $result = "Произведение: " . multiplication($arg1, $arg2);
+            break;
+        case "Частное":
+            $result = "Частное: " . division($arg1, $arg2);
+            break;
+        default:
+            echo "Неправильно задано арифметическое действие. Возможна опечатка!";
+    }
+    return $result;
+}
 ?>
 
 <!DOCTYPE html>
@@ -72,6 +91,10 @@ function division($x, $y){
         
         double_br();     
         echo "<h1>Задание 4.</h1>";
+        echo mathOperation ($a, $b, 'Произведение');
+
+        double_br();     
+        echo "<h1>Задание 5.</h1>";
     ?>
 
     <?php
