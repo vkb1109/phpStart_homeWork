@@ -1,8 +1,23 @@
 <?php
 
-$a = 5;
+$a = 6;
 $b = 3;
 
+function sum ($x, $y){
+    return $x + $y;
+}
+
+function multiplication($x, $y){
+    return $x * $y;
+}
+
+function subtraction($x, $y){
+    return $x - $y;
+}
+
+function division($x, $y){
+    return $x / $y;
+}
 
 ?>
 
@@ -24,7 +39,8 @@ $b = 3;
             echo $a * $b;
         else                           
             echo $a + $b;
-        double_br();     
+        
+            double_br();     
         echo "<h1>Задание 2.</h1>";
         switch($a){
             case 1: echo 1 . " ";
@@ -46,8 +62,16 @@ $b = 3;
                 break;
             default: echo "Значение a больше 15 или меньше 1.";
         }
+        
         double_br();     
         echo "<h1>Задание 3.</h1>";
+        echo "Сумма: " . sum($a, $b) . ";<br>";
+        echo "Разность: " . subtraction($a, $b) . ";<br>";
+        echo "Произведение: " . multiplication($a, $b) . ";<br>";
+        echo "Частное: " . division($a, $b) . ";<br>";
+        
+        double_br();     
+        echo "<h1>Задание 4.</h1>";
     ?>
 
     <?php
