@@ -1,3 +1,11 @@
+<?php
+
+$a = 31;
+$b = 3;
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,6 +16,19 @@
 </head>
 <body>
     
+    <?php
+        echo "<h1>Задание 1.</h1>";
+        if ($a >= 0 && $b >= 0)
+            echo $a - $b;
+        else if ($a < 0 && $b < 0)
+            echo $a * $b;
+        else                           
+            echo $a + $b;
+        double_br();     
+        echo "<h1>Задание 2.</h1>";
+
+    ?>
+
     <?php
         $x = 42;
         $y = 5;
