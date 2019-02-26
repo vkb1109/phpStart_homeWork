@@ -51,6 +51,22 @@ function power($val, $pow){
     return $val * power($val, $pow - 1);
 }
 
+function timeNow(){
+    $hours = date('G');
+    $minutes = date('i');
+    if ($hours == '0' || ($hours > '4' && $hours < '21'))
+        $hoursString = " часов";
+    else if ($hours == '1' || $hours == '21')
+        $hoursString = " час";
+    else $hoursString = " часа";
+    if ($minutes == '0' || ($minutes > 4 && $minutes < 21) || ($minutes > 24 && $minutes < 31)  || ($minutes > 34 && $minutes < 41) || ($minutes > 44 && $minutes < 51) || ($minutes > 54 && $minutes < 61))
+        $minutesString = " минут";
+    else if ($minutes == '1' || $minutes == '21' || $minutes == '31' || $minutes == '41' || $minutes == '51')
+        $minutesString = " минута";
+    else $minutesString = " минуты";
+    return $timeString = "Сейчас " . $hours . $hoursString . " " . $minutes . $minutesString;
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -119,6 +135,7 @@ function power($val, $pow){
         
         double_br();     
         echo "<h1>Задание 7.</h1>";
+        echo timeNow();
     ?>
 
 
