@@ -1,6 +1,8 @@
 <?php
     $i = 0;
     $n = 100;
+    $ii = 0;
+    $m = 10;
 
     function double_br() {echo "<br><hr><br>";}
 ?>
@@ -31,7 +33,20 @@
         
         echo "<h2>Задание 2.</h2>";
         double_br();
-
+        do {
+            if ($ii == 0) {
+                echo "$ii - это ноль.<br>";
+                $ii++;
+            }
+            else if ($ii % 2 == 0) {
+                echo "$ii - чётное число.<br>";
+                $ii++;
+            }
+            else {
+                echo "$ii - нечётное число.<br>";
+                $ii++;
+            }
+        } while ($ii <= $m);
     ?>
     
     
