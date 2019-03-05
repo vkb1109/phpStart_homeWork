@@ -160,7 +160,11 @@
         echo "<ul>";
         foreach ($menu as $item)
             echo "<li><a href = '{$item [href]}'>{$item [link]}</a></li>";
-        echo "</ul>";    
+        echo "</ul>"; 
+        
+        echo "<h2>Задание 7.</h2>";
+        double_br();
+        for ($i = 0; $i < 10; print $i . ", ", ++$i);
     ?>
     
     
