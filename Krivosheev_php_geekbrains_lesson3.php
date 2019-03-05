@@ -135,8 +135,18 @@
         function translit($string, $translitor){
             return strtr ($string, $translitor);
         }  
-        $str = "Всем привет! Съездим на море отдохнуть?";
+        echo $str = "Всем привет! Съездим на море отдохнуть?";
+        echo "<br>";
         echo translit($str, $translit);
+
+        echo "<h2>Задание 5.</h2>";
+        double_br();
+        function replaceStr($str) {
+            return $str = str_replace (" ", "_", $str);
+        }
+        echo $stringReplace = "replace spacing";
+        echo "<br>";
+        echo replaceStr($stringReplace);
     ?>
     
     
