@@ -147,6 +147,20 @@
         echo $stringReplace = "replace spacing";
         echo "<br>";
         echo replaceStr($stringReplace);
+
+        echo "<h2>Задание 6.</h2>";
+        double_br();
+
+        $menu = array (
+            array ('link' => 'Главная', 'href' => '#'),
+            array ('link' => 'Каталог', 'href' => '#'),
+            array ('link' => 'Условия', 'href' => '#'),
+            array ('link' => 'Контакты', 'href' => '#')
+        );
+        echo "<ul>";
+        foreach ($menu as $item)
+            echo "<li><a href = '{$item [href]}'>{$item [link]}</a></li>";
+        echo "</ul>";    
     ?>
     
     
